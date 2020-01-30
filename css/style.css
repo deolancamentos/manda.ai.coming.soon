@@ -126,7 +126,7 @@ a:focus, img:focus, button:focus, .btn:focus {
 /*== Body ==*/
 
 body {
-	background-image: url(../images/overlay-bg.png), url(../images/main-bg.jpg);
+	background-image: url(../images/overlay-bg.png), url(../images/top.png);
 	background-size: cover;
 	background-repeat: repeat, no-repeat;
 	background-position: center center;
