@@ -4,8 +4,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<meta charset="utf-8">
 		<!-- Description, Keywords and Author -->
-		<meta name="description" content="">
-		<meta name="author" content="">
 		<title>Manda.aí | Delivery para todos!</title>
 		<meta name="description" content="O manda.aí tenta proporcionar a melhor experiência em entregas que o entregador pode ter. Com o nosso aplicativo, você escolhe seu horário de trabalho e dias em que estará em operação. Escolha como deseja entregar! O nosso papel é oferecer a ferramenta e guiá-lo até seu destino final, o cliente. Entregamos um histórico via listas e gráficos de todos os pedidos que foram realizados, para lhe ajudar a escolher os melhores horários e lugares mais convenientes para você.">
 		<meta name="author" content="Manda.aí">
@@ -44,6 +42,13 @@
 		<!-- font-awesome -->
 		<link href="css/font-awesome.min.css" rel="stylesheet">
 		<!-- font-awesome -->
+		<script type="text/javascript">
+			var onloadCallback = function() {
+			  grecaptcha.render('html_element', {
+				'6LfnF7kZAAAAAAwn_h2p3JY3OGkHcV2-D8rXAuoe' : '6LfnF7kZAAAAAHe-VX-GMAvHPurYJEbVRcVTnzdg'
+			  });
+			};
+		  </script>
 		<!-- Facebook Pixel Code -->
 		<script>
 			!function(f,b,e,v,n,t,s)
@@ -71,6 +76,7 @@
 
 		gtag('config', 'UA-137819515-13');
 		</script>
+		 <script src="https://www.google.com/recaptcha/api.js"></script>
 	</head>
 	<body>
 		<!-- side bar -->
@@ -202,7 +208,10 @@
 													<div class="clearfix"></div>
 													<textarea id="message" name="message" cols="" rows="" placeholder="Mensagem" required ></textarea>
 													<div class="clearfix"></div>
-													<input name="" type="submit" value="Enviar">
+													<button class="g-recaptcha" 
+														data-sitekey="reCAPTCHA_site_key" 
+														data-callback='onSubmit' 
+														data-action='submit'>Submit</button>
 													<input type="hidden" id="source" name="source" value="" />  
 													<img src="https://llimages.com/redirect/redirect.aspx?A=V&p=13532753&m=362270" style="display: none;" />
 													<div id="simple-msg"></div>
@@ -314,6 +323,11 @@
 			});
 			});
 		</script>
+		<script>
+			function onSubmit(token) {
+			  document.getElementById("demo-form").submit();
+			}
+		  </script>
 	</body>
 </html>
 <!-- <header role="page-title">
